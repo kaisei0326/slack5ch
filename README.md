@@ -1,2 +1,2 @@
 # slack5ch
-5ch for slack
+Anonymity in 2ch of slack
