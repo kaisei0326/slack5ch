@@ -1,19 +1,3 @@
-/*
-function doPost(e) {  
-  var verificationToken = e.parameter.token;
-  if (verificationToken != 'MqZTocUJb2RF7yfYmD72lSnj') { // AppのVerification Tokenを入れる
-    throw new Error('Invalid token');
-  }
-  
-  var command = e.parameter.text
-  var response = { text: command };
-  
-  var ch = "CFG3HU6TA"
-
-  return ContentService.createTextOutput(JSON.stringify(response)).setMimeType(ContentService.MimeType.JSON);
-}
-*/
-
 function doPost(e) {
   //Get properties.
   var token =  PropertiesService.getScriptProperties().getProperty('TOKEN');
@@ -29,12 +13,7 @@ function doPost(e) {
   var message = e.parameter.text;
   var args = message.split(' ');
   var payload = {
-    "text" : args[0] + " you received " + args[1] + ":pancakes: from <@" + e.parameter.user_id + ">",
-    "attachments" : [
-      {
-        "text" : args[2]
-      }
-    ],
+    "text" : args[0],
     "channel" : "CFG3HU6TA",
   }
   
