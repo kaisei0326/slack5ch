@@ -1,2 +1,3 @@
 # slack5ch
-Anonymity in 5ch of slack
+
+Anonymity to slack with "slach commands"
