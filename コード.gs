@@ -13,7 +13,7 @@ function doPost(e) {
   var message = e.parameter.text;
   var args = message.split(' ');
   var payload = {
-    "text" : args[0],
+    "text" : e.parameter.text,
     "channel" : "CFG3HU6TA",
   }
   
@@ -39,7 +39,8 @@ function sendResponse(payload, url) {
 
   var options = {
     "method" : "POST",
-    "payload" : JSON.stringify(payload)
+    "payload" : JSON.stringify(payload),
+    "icon_emoji" : ":ghost:"
   }
   
   var response = UrlFetchApp.fetch(url, options);
